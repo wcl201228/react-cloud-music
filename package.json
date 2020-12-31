@@ -31,6 +31,8 @@
     "eslint": "^7.16.0",
     "eslint-config-alloy": "^3.10.0",
     "eslint-plugin-react": "^7.22.0",
+    "husky": "^4.3.6",
+    "lint-staged": "^10.5.3",
     "prettier": "^2.2.1"
   },
   "scripts": {
@@ -44,6 +46,14 @@
       "react-app",
       "react-app/jest"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "eslint"
   },
   "browserslist": {
     "production": [
