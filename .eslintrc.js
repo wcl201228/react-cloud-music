@@ -3,6 +3,11 @@ module.exports = {
     'alloy',
     'alloy/react',
     'alloy/typescript',
+    "plugin:react-hooks/recommended"
+  ],
+  "plugins": [
+    // ...
+    "react-hooks"
   ],
   env: {
     // 你的环境变量（包含多个预定义的全局变量）
@@ -20,5 +25,7 @@ module.exports = {
   },
   rules: {
     // 自定义你的规则
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
   },
 };
